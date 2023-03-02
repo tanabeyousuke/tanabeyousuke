@@ -1,0 +1,66 @@
+#“Œ•û’e–‹•—[Single]
+#ScriptVersion[3]
+#Title["a"]
+#Text["a"]
+
+#include"script/default_system/Default_ShotConst.txt"
+
+let objEnemy;
+
+
+@Event
+{
+	alternative(GetEventType())
+	case(EV_REQUEST_LIFE)
+	{
+		SetScriptResult(1000);
+	}
+}
+
+@Initialize
+{
+	objEnemy = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objEnemy);
+
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+
+	ObjPrim_SetTexture(objEnemy, imgExRumia);
+	ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objEnemy);
+
+	let cx = GetStgFrameWidth() / 2;
+	ObjMove_SetDestAtFrame(objEnemy, cx, 160, 60);
+
+}
+
+let flame = 0;
+let count = 0;
+let i = 0;
+let ro = 0;
+@MainLoop
+{
+	let ex = ObjMove_GetX(objEnemy);
+	let ey = ObjMove_GetY(objEnemy);
+
+	let px = GetPlayerX();
+	let py = GetPlayerY();
+
+	if(flame > 120){
+	let angleToPlayer = atan2(py - ey, px - ex);
+	count++;
+	if(count == 4){
+		loop(12){
+			CreateShotA1(ex, ey, 8, i - (flame / 2) , DS_BALL_BS_RED, 0);
+			i = i + 30;
+		}
+		count = 0;
+	}
+	}
+	if(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) <= 0)
+	{
+		Obj_Delete(objEnemy);
+		CloseScript(GetOwnScriptID());
+		return;
+	}
+	flame++;
+}
