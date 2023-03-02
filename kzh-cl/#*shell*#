@@ -1,0 +1,47 @@
+tanabe@tanabe:~/program/c$ ls
+tanabe@tanabe:~/program/c$ mkdir kzh-cl
+tanabe@tanabe:~/program/c$ls
+kzh-cl
+tanabe@tanabe:~/program/c$ gcc kzh-cl
+/usr/bin/ld: kzh-cl が見つかりません: file format not recognized
+collect2: error: ld returned 1 exit status
+tanabe@tanabe:~/program/c$ cd kzh-cl
+tanabe@tanabe:~/program/c/kzh-cl$ ls
+README  main.c  main.c~
+tanabe@tanabe:~/program/c/kzh-cl$ gcc main.c
+main.c: In function ‘upload’:
+main.c:9:3: error: ‘server’ undeclared (first use in this function)
+    9 |   server.sin_family = AF_INET;
+      |   ^~~~~~
+main.c:9:3: note: each undeclared identifier is reported only once for each function it appears in
+main.c:11:28: warning: implicit declaration of function ‘inet_addr’ [-Wimplicit-function-declaration]
+ls   11 |   server.sin_addr.s_addr = inet_addr(ip);
+      |                            ^~~~~~~~~
+main.c:13:11: error: ‘sock’ undeclared (first use in this function); did you mean ‘socket’?
+   13 |   connect(sock, (struct sockaddr *)&server, sizeof(server));
+      |           ^~~~
+      |           socket
+main.c:20:3: warning: implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+   20 |   close(sock);
+      |   ^~~~~
+      |   pclose
+main.c:22:10: warning: returning ‘char *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   22 |   return subject;
+      |          ^~~~~~~
+main.c: In function ‘main’:
+main.c:36:12: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   36 |     printf(upload(ip, port, naiyou));
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~
+      |            |
+      |            int
+In file included from main.c:1:
+/usr/include/stdio.h:332:43: note: expected ‘const char * restrict’ but argument is of type ‘int’
+  332 | extern int printf (const char *__restrict __format, ...);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+tanabe@tanabe:~/program/c/kzh-cl$ ls   11 |   server.sin_addr.s_addr = inet_addr(ip);
+bash: 予期しないトークン `(' 周辺に構文エラーがあります
+tanabe@tanabe:~/program/c/kzh-cl$ ls
+'*shell*'   README   a.out   main.c   main.c~
+tanabe@tanabe:~/program/c/kzh-cl$ rm '*shell*'
+tanabe@tanabe:~/program/c/kzh-cl$ mkdir kzh-sv
+tanabe@tanabe:~/program/c/kzh-cl$ 
