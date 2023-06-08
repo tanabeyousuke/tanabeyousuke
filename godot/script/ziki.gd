@@ -1,5 +1,6 @@
 extends Node2D
 
+
 func _ready():
 	pass
 
@@ -21,5 +22,5 @@ func _process(delta):
 	if Input.is_action_pressed("shot"):
 		var shot = preload("res://seen/shot.tscn").instantiate()
 		shot.position = position
-		var rootnode = get_node("/root")
-		rootnode.add_child(shot)
+		var root = get_node("/root")
+		root.add_child(shot)

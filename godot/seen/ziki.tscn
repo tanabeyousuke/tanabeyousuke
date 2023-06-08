@@ -11,11 +11,14 @@ radius = 3.0
 script = ExtResource("1_yn2dj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
 shape = SubResource("CircleShape2D_na8c1")
 
 [node name="Ziki" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_3iwqy")
+hframes = 2
 
 [node name="Hantei" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
 texture = ExtResource("3_d1c2y")
