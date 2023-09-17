@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://crgrt85vmbip6"]
+
+[ext_resource type="Script" path="res://script/shot.gd" id="1_67apl"]
+[ext_resource type="Texture2D" uid="uid://cib1ikox4xdij" path="res://picture/shot.png" id="2_ba81f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg4lk"]
+size = Vector2(20, 59)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_67apl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_dg4lk")
+
+[node name="Tama" type="Sprite2D" parent="."]
+texture = ExtResource("2_ba81f")
+hframes = 3
