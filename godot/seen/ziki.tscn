@@ -12,7 +12,7 @@ load_path = "res://.godot/imported/ziki.png-815bf1f8c5fa155b61126e5ea0d72df9.cte
 radius = 3.0
 
 [node name="ziki" type="Area2D"]
-collision_mask = 12
+collision_mask = 0
 script = ExtResource("1_yn2dj")
 
 [node name="Ziki" type="Sprite2D" parent="."]

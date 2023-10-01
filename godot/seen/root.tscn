@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://el61k7i780fp"]
+[gd_scene load_steps=3 format=3 uid="uid://el61k7i780fp"]
 
 [ext_resource type="Script" path="res://script/root.gd" id="1_utpcy"]
+[ext_resource type="PackedScene" uid="uid://yfqajq1mq5yj" path="res://seen/enemy/ragaku.tscn" id="2_k3v2d"]
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_utpcy")
+
+[node name="sannkyaku" parent="." instance=ExtResource("2_k3v2d")]
+position = Vector2(219, 224)
+
+[node name="sannkyaku2" parent="." instance=ExtResource("2_k3v2d")]
+position = Vector2(383, 228)

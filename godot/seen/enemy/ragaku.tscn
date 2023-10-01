@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://yfqajq1mq5yj"]
+
+[ext_resource type="Texture2D" uid="uid://if34itxtmxsm" path="res://picture/enemy/sankyaku.png" id="1_cip1p"]
+[ext_resource type="Texture2D" uid="uid://rl4jvxsnaoix" path="res://picture/enemy/masingan.png" id="2_2wkb6"]
+[ext_resource type="Script" path="res://script/enemy/ragaku.gd" id="2_4f2fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6erpd"]
+size = Vector2(50, 70)
+
+[node name="sannkyaku" type="Sprite2D"]
+texture = ExtResource("1_cip1p")
+script = ExtResource("2_4f2fw")
+
+[node name="masingan" type="Sprite2D" parent="."]
+position = Vector2(0, 0.5)
+rotation = -6.28319
+texture = ExtResource("2_2wkb6")
+
+[node name="Area2D" type="Area2D" parent="masingan"]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="masingan/Area2D"]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_6erpd")

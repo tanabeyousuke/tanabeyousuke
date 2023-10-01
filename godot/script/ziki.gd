@@ -37,7 +37,7 @@ func _process(delta):
 	if Input.is_action_pressed("down") and position.y < 780:
 		position.y = position.y + speed
 		
-	if Input.is_action_pressed("shot"):
+	if Input.is_action_pressed("shot") or Input.is_action_pressed("slow"):
 		var shot = Global.bullet.instantiate()
 		shot.position.x = position.x - 7
 		shot.position.y = position.y - 80

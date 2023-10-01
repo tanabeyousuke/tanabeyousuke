@@ -4,7 +4,7 @@ var base = position
 var base_kakudo = rotation
 
 func _process(delta):
-	if Input.is_action_pressed("shot"):
+	if Input.is_action_pressed("shot") or Input.is_action_pressed("slow"):
 		var root = get_node("/root")
 		var tama = Global.bullet.instantiate()
 		tama.position = global_position

@@ -4,6 +4,6 @@
 [ext_resource type="Script" path="res://script/stage/stage1.gd" id="1_vw4s3"]
 
 [node name="stage1" type="Sprite2D"]
-position = Vector2(300, -4200)
+position = Vector2(300, -2600)
 texture = ExtResource("1_tjtmv")
 script = ExtResource("1_vw4s3")
