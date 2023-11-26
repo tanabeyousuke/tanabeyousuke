@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkw0la1ku51uk"]
+
+[ext_resource type="Texture2D" uid="uid://cnqasqh4282nx" path="res://picture/enemy/syatai.png" id="1_52oc4"]
+[ext_resource type="Script" path="res://script/enemy/sogaku.gd" id="2_cxt4y"]
+[ext_resource type="Texture2D" uid="uid://cayuhvy3ylwcr" path="res://picture/enemy/houdai.png" id="2_igpqi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ycgn"]
+size = Vector2(78, 68)
+
+[node name="sogaku" type="Area2D"]
+script = ExtResource("2_cxt4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5ycgn")
+
+[node name="syatai" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_52oc4")
+
+[node name="houdai" type="Sprite2D" parent="."]
+texture = ExtResource("2_igpqi")

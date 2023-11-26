@@ -18,3 +18,5 @@ shape = SubResource("RectangleShape2D_dg4lk")
 [node name="Tama" type="Sprite2D" parent="."]
 texture = ExtResource("2_ba81f")
 hframes = 3
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
