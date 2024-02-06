@@ -2,7 +2,7 @@ extends Area2D
 
 var tama = preload('res://seen/tama.tscn')
 var hp = 200
-const TYPE = "tizyou"
+const type = "tizyou"
 
 func hit(damage):
 	hp = hp - damage

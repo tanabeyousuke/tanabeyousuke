@@ -2,7 +2,7 @@ extends Area2D
 
 var angle = 0
 var speed = 10
-
+const type = "tama"
 func _process(delta):
 	position.x = position.x + speed * cos(deg_to_rad(angle))
 	position.y = position.y + speed * sin(deg_to_rad(angle))

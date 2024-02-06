@@ -1,6 +1,7 @@
 extends Sprite2D
 
 var tama = preload('res://seen/tama.tscn')
+const type = "tizyou"
 
 func cshot(x, y, angle, speed):
 	var root = get_tree().root

@@ -1,9 +1,10 @@
 extends Area2D
 
-
 var angle = 0
 var things = 0
 var damage = 0
+const speed = 30
+const type = "shot"
 
 func _ready():
 	rotation = deg_to_rad(angle)
@@ -17,12 +18,12 @@ func _ready():
 			damage = 5
 
 func _process(delta):
-	position.x = position.x - 40 * cos(deg_to_rad(angle + 90))
-	position.y = position.y - 40 * sin(deg_to_rad(angle + 90))
+	position.x = position.x - speed * cos(deg_to_rad(angle + 90))
+	position.y = position.y - speed * sin(deg_to_rad(angle + 90))
 	if position.y < -20:
 		queue_free()
 
 func _on_area_entered(area:Area2D):
-	print("hit!")
-	if area.TYPE == "enemy" or area.TYPE == "tizyou":
+	if area.type == "enemy" or area.type == "tizyou" or area.type == "boss":
 		area.hit(damage)
+		queue_free()

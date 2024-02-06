@@ -1,19 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwuej3ipge4de"]
+[gd_scene load_steps=5 format=3 uid="uid://4bleaar548km"]
 
 [ext_resource type="Script" path="res://script/enemy/kasou.gd" id="1_nom08"]
 [ext_resource type="Texture2D" uid="uid://chi03ydje1pgx" path="res://picture/enemy/kasou.png" id="1_p83je"]
 [ext_resource type="Texture2D" uid="uid://y2r5t4manywe" path="res://picture/enemy/puropera.png" id="3_q78gd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aecim"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5tci"]
 
-[node name="kasou" type="Sprite2D"]
-texture = ExtResource("1_p83je")
+[node name="enemy" type="Area2D"]
 script = ExtResource("1_nom08")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t5tci")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_aecim")
+[node name="Kasou" type="Sprite2D" parent="."]
+texture = ExtResource("1_p83je")
 
 [node name="Puropera" type="Sprite2D" parent="."]
 texture = ExtResource("3_q78gd")

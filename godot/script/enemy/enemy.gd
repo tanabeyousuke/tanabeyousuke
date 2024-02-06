@@ -1,6 +1,7 @@
 extends Area2D
 
 var tama = preload('res://seen/tama.tscn')
+const type = "enemy"
 
 func cshot(x, y, angle, speed):
 	var bullet = tama.instantiate()

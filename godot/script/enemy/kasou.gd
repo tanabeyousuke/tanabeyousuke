@@ -1,11 +1,11 @@
-extends Sprite2D
+extends Area2D
 
 var stopx = 300
 var count = 0
 var cycle = 0
 var state = 0
 var hp = 100
-const TYPE = "enemy"
+const type = "enemy"
 
 var tama = preload('res://seen/tama.tscn')
 

@@ -4,7 +4,7 @@ var sensya = preload("res://seen/enemy/sogaku.tscn")
 var count = 0
 var appearance = false
 var hp = 500
-const TYPE = "tizyou"
+const type = "tizyou"
 
 func hit(damage):
 	hp = hp - damage
