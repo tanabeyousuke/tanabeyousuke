@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://el61k7i780fp"]
+[gd_scene load_steps=4 format=3 uid="uid://el61k7i780fp"]
 
 [ext_resource type="Script" path="res://script/root.gd" id="1_utpcy"]
 [ext_resource type="PackedScene" uid="uid://crel22siqgvn7" path="res://seen/stage/stage1.tscn" id="2_2oe4y"]
 [ext_resource type="PackedScene" uid="uid://cxp6kvsye3sry" path="res://seen/enemy/garage/garage(sogaku).tscn" id="3_h3b4l"]
-[ext_resource type="PackedScene" uid="uid://4bleaar548km" path="res://seen/enemy/kasou.tscn" id="4_jme1o"]
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_utpcy")
@@ -12,6 +11,3 @@ script = ExtResource("1_utpcy")
 
 [node name="garage" parent="stage1" instance=ExtResource("3_h3b4l")]
 position = Vector2(-250, 1405)
-
-[node name="kasou" parent="." instance=ExtResource("4_jme1o")]
-position = Vector2(190, 168)

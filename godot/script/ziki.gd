@@ -37,35 +37,28 @@ func _process(delta):
 		position.y = position.y + speed
 		
 	if Input.is_action_pressed("shot") or Input.is_action_pressed("slow"):
-		if ct == 0:
-			var shot = Global.bullet.instantiate()
-			shot.position.x = position.x - 7
-			shot.position.y = position.y - 80
-			var root = get_node("/root") 
-			root.add_child(shot)
-		
-			shot = Global.bullet.instantiate()
-			shot.position.x = position.x + 7
-			shot.position.y = position.y - 80 
-			root.add_child(shot)
-		
-			shot = Global.bullet.instantiate()
-			shot.things = 1
-			shot.position.x = position.x + 22.5
-			shot.position.y = position.y - 45
-			root.add_child(shot)
-		
-			shot = Global.bullet.instantiate()
-			shot.things = 1
-			shot.position.x = position.x - 22.5
-			shot.position.y = position.y - 45
-			root.add_child(shot)
-			
-			ct = 5
-		else :
-			ct = ct - 1
-	else :
-		ct = 0
+		var shot = Global.bullet.instantiate()
+		shot.position.x = position.x - 7
+		shot.position.y = position.y - 80
+		var root = get_node("/root") 
+		root.add_child(shot)
+	
+		shot = Global.bullet.instantiate()
+		shot.position.x = position.x + 7
+		shot.position.y = position.y - 80 
+		root.add_child(shot)
+	
+		shot = Global.bullet.instantiate()
+		shot.things = 1
+		shot.position.x = position.x + 22.5
+		shot.position.y = position.y - 45
+		root.add_child(shot)
+	
+		shot = Global.bullet.instantiate()
+		shot.things = 1
+		shot.position.x = position.x - 22.5
+		shot.position.y = position.y - 45
+		root.add_child(shot)
 
 
 func _on_area_entered(area):
