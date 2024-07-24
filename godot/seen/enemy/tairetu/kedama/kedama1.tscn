@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbgwju357k7k5"]
+
+[ext_resource type="Script" path="res://script/enemy/tairetu/kedama/kedama1.gd" id="1_l13ct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfb2n"]
+size = Vector2(0, 0)
+
+[node name="Kedama1" type="Area2D"]
+script = ExtResource("1_l13ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dfb2n")

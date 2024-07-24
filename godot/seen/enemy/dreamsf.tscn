@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://bvos2vf30la67"]
+
+[ext_resource type="Script" path="res://script/enemy/dreamsf/dreamsf.gd" id="1_ic4kj"]
+[ext_resource type="Texture2D" uid="uid://1yi50a255rm2" path="res://picture/dreamsf.png" id="2_kn5hf"]
+[ext_resource type="Script" path="res://script/enemy/dreamsf/tyoutugai.gd" id="3_u267q"]
+[ext_resource type="Texture2D" uid="uid://db1hiq54ijd5b" path="res://picture/dream/tyoutugai.png" id="4_ysx8m"]
+[ext_resource type="Script" path="res://script/enemy/dreamsf/Lcannon.gd" id="5_ytdhm"]
+[ext_resource type="Texture2D" uid="uid://cuxjevk0vp7ig" path="res://picture/dream/housin.png" id="6_84trh"]
+[ext_resource type="Script" path="res://script/enemy/dreamsf/Rcannon.gd" id="7_ohhiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tn85y"]
+size = Vector2(120, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0buhb"]
+size = Vector2(29.5, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lips2"]
+size = Vector2(29.5, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ail7h"]
+size = Vector2(29, 150)
+
+[node name="Dreamsf" type="Area2D"]
+position = Vector2(300, 0)
+script = ExtResource("1_ic4kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kn5hf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tn85y")
+
+[node name="tyoutugai" type="Area2D" parent="."]
+script = ExtResource("3_u267q")
+
+[node name="Sprite2D" type="Sprite2D" parent="tyoutugai"]
+scale = Vector2(1, 0.5)
+texture = ExtResource("4_ysx8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tyoutugai"]
+scale = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_0buhb")
+
+[node name="Lcannon" type="Area2D" parent="tyoutugai"]
+position = Vector2(21, 43)
+scale = Vector2(0.5, 1)
+script = ExtResource("5_ytdhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tyoutugai/Lcannon"]
+shape = SubResource("RectangleShape2D_lips2")
+
+[node name="Sprite2D" type="Sprite2D" parent="tyoutugai/Lcannon"]
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("6_84trh")
+
+[node name="Rcannon" type="Area2D" parent="tyoutugai"]
+position = Vector2(-22, 43)
+scale = Vector2(0.5, 1)
+script = ExtResource("7_ohhiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tyoutugai/Rcannon"]
+shape = SubResource("RectangleShape2D_ail7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="tyoutugai/Rcannon"]
+rotation = 3.14159
+texture = ExtResource("6_84trh")

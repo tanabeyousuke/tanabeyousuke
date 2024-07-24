@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://6lrsjh5qr57r"]
+
+[ext_resource type="Texture2D" uid="uid://bl8mw0q3logcq" path="res://picture/stingray.png" id="1_3syhx"]
+[ext_resource type="Script" path="res://script/enemy/stingray.gd" id="1_mmel4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipjrq"]
+size = Vector2(30, 30)
+
+[node name="Stingray" type="Area2D"]
+position = Vector2(200, 100)
+script = ExtResource("1_mmel4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ipjrq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.58825
+texture = ExtResource("1_3syhx")

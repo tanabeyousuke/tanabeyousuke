@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://chqvw8y6kofjr"]
+
+[ext_resource type="Script" path="res://script/enemy/yousei.gd" id="1_2j7qb"]
+[ext_resource type="Texture2D" uid="uid://bdpjfpbnbl53r" path="res://picture/yousei.png" id="1_cgppy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0yua"]
+size = Vector2(30, 30)
+
+[node name="Yousei" type="Area2D"]
+script = ExtResource("1_2j7qb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k0yua")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cgppy")

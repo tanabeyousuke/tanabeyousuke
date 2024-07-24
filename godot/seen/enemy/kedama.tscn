@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba684bo6qk4el"]
+
+[ext_resource type="Script" path="res://script/enemy/kedama.gd" id="1_u6yux"]
+[ext_resource type="Texture2D" uid="uid://bl7t5e0073bvq" path="res://picture/kedama.png" id="2_wjave"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovqvi"]
+radius = 25.02
+
+[node name="Kedama" type="Area2D"]
+script = ExtResource("1_u6yux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ovqvi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wjave")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://blc2fgt8bcwx5"]
+
+[ext_resource type="Script" path="res://script/enemy/myousei.gd" id="1_3ccta"]
+[ext_resource type="Texture2D" uid="uid://drguljg1vis2m" path="res://picture/myousei.png.png" id="1_4odw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmnwn"]
+size = Vector2(70, 69)
+
+[node name="Myousei" type="Area2D"]
+script = ExtResource("1_3ccta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_kmnwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4odw3")

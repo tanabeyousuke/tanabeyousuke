@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c50002joyv7e0"]
+
+[ext_resource type="Script" path="res://script/enemy/tairetu/sfyousei/sfyousei1.gd" id="1_46br2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8d657"]
+radius = 0.0
+
+[node name="Sfyousei" type="Area2D"]
+script = ExtResource("1_46br2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8d657")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj1sym1600hg0"]
+
+[ext_resource type="Texture2D" uid="uid://vuvmkkvhgh7w" path="res://picture/sfyousei.png" id="1_bgi7o"]
+[ext_resource type="Script" path="res://script/enemy/sfyousei.gd" id="1_y88tq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgndl"]
+size = Vector2(122, 114)
+
+[node name="Sfyousei" type="Area2D"]
+script = ExtResource("1_y88tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cgndl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bgi7o")
