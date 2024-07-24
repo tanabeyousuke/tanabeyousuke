@@ -9,7 +9,7 @@ var count = 0
 func breaked():
 	nokori = nokori -1
 	if nokori == 0:
-		$"../".next()
+		Global.stage.next()
 		queue_free()
 
 func _ready():

@@ -9,7 +9,7 @@
 load_path = "res://.godot/imported/ziki.png-815bf1f8c5fa155b61126e5ea0d72df9.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_na8c1"]
-radius = 3.0
+radius = 2.0
 
 [node name="ziki" type="Area2D"]
 z_index = 1

@@ -60,6 +60,5 @@ func _process(delta):
 		shot.position.y = position.y - 45
 		root.add_child(shot)
 
-
 func _on_area_entered(area):
 	queue_free()

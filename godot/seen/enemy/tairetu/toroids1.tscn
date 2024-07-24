@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://2cn2oxiwh030"]
+
+[ext_resource type="Script" path="res://script/enemy/tairetu/toroids1.gd" id="1_kd5up"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_200jq"]
+radius = 0.0
+
+[node name="Toroids1" type="Area2D"]
+script = ExtResource("1_kd5up")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_200jq")

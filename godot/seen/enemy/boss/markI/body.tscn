@@ -1,0 +1,61 @@
+[gd_scene load_steps=13 format=3 uid="uid://bc2c0p6nm7qot"]
+
+[ext_resource type="Script" path="res://script/enemy/boss/markI/body.gd" id="1_ofltr"]
+[ext_resource type="Texture2D" uid="uid://bslnlvtompv4" path="res://picture/enemy/boss/markI/body.png" id="2_cfnr3"]
+[ext_resource type="Script" path="res://script/enemy/boss/markI/Rcannon.gd" id="3_5s7t8"]
+[ext_resource type="Texture2D" uid="uid://dobqdcmjjykan" path="res://picture/enemy/boss/markI/Rcannon.png" id="4_w5dfi"]
+[ext_resource type="Script" path="res://script/enemy/boss/markI/Lcannon.gd" id="5_i2r7f"]
+[ext_resource type="Texture2D" uid="uid://cv14ripxftfbf" path="res://picture/enemy/boss/markI/Lcannon.png" id="6_24c4b"]
+[ext_resource type="Script" path="res://script/enemy/boss/markI/rear.gd" id="7_5v2ak"]
+[ext_resource type="Texture2D" uid="uid://cdtca2g7j0v3s" path="res://picture/enemy/boss/markI/rear.png" id="8_bhsp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xcx3"]
+size = Vector2(226, 302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ob8n"]
+size = Vector2(35.25, 156.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b47w"]
+size = Vector2(38, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kotlt"]
+size = Vector2(148, 98)
+
+[node name="Body" type="Area2D"]
+script = ExtResource("1_ofltr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0xcx3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cfnr3")
+
+[node name="Rcannon" type="Area2D" parent="."]
+position = Vector2(-131, 50)
+script = ExtResource("3_5s7t8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rcannon"]
+shape = SubResource("RectangleShape2D_8ob8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rcannon"]
+texture = ExtResource("4_w5dfi")
+
+[node name="Lcannon" type="Area2D" parent="."]
+position = Vector2(132, 49)
+script = ExtResource("5_i2r7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lcannon"]
+shape = SubResource("RectangleShape2D_3b47w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lcannon"]
+texture = ExtResource("6_24c4b")
+
+[node name="rear" type="Area2D" parent="."]
+position = Vector2(0, -200)
+script = ExtResource("7_5v2ak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rear"]
+shape = SubResource("RectangleShape2D_kotlt")
+
+[node name="Sprite2D" type="Sprite2D" parent="rear"]
+texture = ExtResource("8_bhsp2")

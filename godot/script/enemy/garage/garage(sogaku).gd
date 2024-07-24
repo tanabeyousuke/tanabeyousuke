@@ -12,7 +12,7 @@ func hit(damage):
 		queue_free()
 
 func _process(delta):
-	if global_position.y > -45 or global_position.y < 825 or global_position.x > -25 or global_position.x < 625:
+	if global_position.y > -45 and global_position.y < 825 and global_position.x > -25 and global_position.x < 625:
 		appearance = true
 		count = count + 1
 		if count == 100:

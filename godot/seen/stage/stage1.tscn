@@ -1,10 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://crel22siqgvn7"]
+[gd_scene load_steps=5 format=3 uid="uid://crel22siqgvn7"]
 
 [ext_resource type="Texture2D" uid="uid://d34d5hpues6c5" path="res://picture/stage/stage1.png" id="1_tjtmv"]
 [ext_resource type="Script" path="res://script/stage/stage1.gd" id="1_vw4s3"]
+[ext_resource type="PackedScene" uid="uid://cxp6kvsye3sry" path="res://seen/enemy/garage/garage(sogaku).tscn" id="3_v526h"]
+[ext_resource type="PackedScene" uid="uid://yfqajq1mq5yj" path="res://seen/enemy/ragaku.tscn" id="4_uywgq"]
 
 [node name="stage1" type="Sprite2D"]
 z_index = -2
 position = Vector2(300, -2600)
 texture = ExtResource("1_tjtmv")
 script = ExtResource("1_vw4s3")
+
+[node name="garage" parent="." instance=ExtResource("3_v526h")]
+position = Vector2(-150, 1000)
+metadata/houkou = 90
+
+[node name="garage2" parent="." instance=ExtResource("3_v526h")]
+position = Vector2(150, 1000)
+metadata/houkou = 90
+
+[node name="sannkyaku" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(198, 796)
+
+[node name="sannkyaku2" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(-198, 324)
+
+[node name="sannkyaku3" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(-78, 234)
+
+[node name="sannkyaku4" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(104, -381)
+
+[node name="sannkyaku5" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(262, -258)
+
+[node name="sannkyaku6" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(-200, -1176)
+
+[node name="sannkyaku7" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(106, -1431)
+
+[node name="sannkyaku8" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(-154, -1671)
+
+[node name="sannkyaku9" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(23, -1661)
+
+[node name="sannkyaku10" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(194, -1668)
+
+[node name="sannkyaku11" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(-122, -1445)
+
+[node name="sannkyaku12" parent="." instance=ExtResource("4_uywgq")]
+position = Vector2(220, -1180)
