@@ -6,7 +6,7 @@ const type = "enemy"
 
 var rl = 0
 var appearance = 0
-var scriptnum = 1
+var scriptnum = 4
 var opt = 0
 var state = 0
 
@@ -82,6 +82,29 @@ func yousei3():
 		for i in range(5):
 			cshot(position.x, position.y, rad_to_deg(atan2(deg_to_rad(Global.zpy - position.y), deg_to_rad(Global.zpx - position.x))) + (2 * (i - 2)), 3)
 
+func yousei4():
+	if position.y < 500:
+		position.y = position.y + 3
+	else:
+		if opt == 0:
+			if rotation < deg_to_rad(90):
+				rotation = rotation + deg_to_rad(1)
+		else:
+			if rotation > deg_to_rad(-90):
+				rotation = rotation - deg_to_rad(1)
+		position.x = position.x + cos(rotation + deg_to_rad(90)) * 3
+		position.y = position.y + sin(rotation + deg_to_rad(90)) * 3
+
+	if count % 10 == 0:
+		cshot(position.x, position.y, rad_to_deg(atan2(Global.zpy - position.y, Global.zpx - position.x)), 10 )
+
+func yousei5():
+	position.x = cos(deg_to_rad(count * 21)) * 120
+	position.y = sin(deg_to_rad(count * 21)) * 120
+	
+	if count % 6 == 0:
+		cshot(global_position.x, global_position.y, rad_to_deg(atan2(Global.zpy - global_position.y, Global.zpx - global_position.x)) + randi() % 8 - 4, 5)
+
 
 func _process(delta):
 	match scriptnum:
@@ -93,9 +116,13 @@ func _process(delta):
 			yousei2()
 		3:
 			yousei3()
-
-	if 	appearance == 1:
-		if hp < 0 or position.x < -25 or position.y < -25 or position.x > 625 or position.y > 825:
+		4:
+			yousei4()
+		5:
+			yousei5()
+			
+	if appearance == 1:
+		if hp < 0 or global_position.x < -25 or global_position.y < -25 or global_position.x > 625 or global_position.y > 825:
 			match scriptnum:
 				2:
 					for i in range(10):

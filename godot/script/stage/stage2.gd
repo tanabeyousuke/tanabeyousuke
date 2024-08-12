@@ -10,7 +10,12 @@ var tairetu = [
 	preload("res://seen/enemy/tairetu/kedama/kedama2.tscn"),
 	preload("res://seen/enemy/tairetu/kedama/kedama3.tscn"),
 	preload("res://seen/enemy/middleboss/mahouzin.tscn"),
-	preload("res://seen/enemy/tairetu/sfyousei/sfyousei1.tscn")]
+	preload("res://seen/enemy/tairetu/sfyousei/sfyousei1.tscn"),
+	preload("res://seen/enemy/tairetu/sfyousei/sfyousei2.tscn"),
+	preload("res://seen/enemy/tairetu/sfyousei/sfyousei3.tscn"),
+	preload("res://seen/enemy/tairetu/sfyousei/sfyousei4.tscn"),
+	preload("res://seen/enemy/tairetu/myousei/myousei2.tscn"),
+	preload("res://seen/enemy/tairetu/sfyousei/sfyousei5.tscn")]
 
 func _process(delta):
 	position.y = position.y + 1
