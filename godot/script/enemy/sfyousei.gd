@@ -6,11 +6,12 @@ const type = "enemy"
 
 var rl = 0
 var appearance = 0
-var scriptnum = 2
+var scriptnum = 3
 var opt = 0
 var state = 0
 
 var tama = preload('res://seen/tama.tscn')
+var yousei = preload('res://seen/enemy/yousei.tscn')
 
 func hit(damage):
 	hp = hp - damage
@@ -61,6 +62,20 @@ func sfyousei2():
 		for i in range(7):
 			cshot(position.x + 60, position.y, rad_to_deg(atan2(Global.zpy - position.y, Global.zpx - (position.x + 60))) + (i * 15) - 45, 10)
 			cshot(position.x - 60, position.y, rad_to_deg(atan2(Global.zpy - position.y, Global.zpx - (position.x - 60))) + (i * 15) - 45, 10)
+
+func sfyousei3():
+	if count == 0:
+		for i in range(5):
+			var ro = yousei.instantiate()
+			ro.count = i * 72
+			ro.scriptnum = 5
+			add_child(ro)
+
+	if count % 30 == 0:
+		for ha in range(5):
+			cshot(global_position.x, global_position.y, rad_to_deg(atan2(Global.zpy - global_position.y, Global.zpx - global_position.x)), ha * 2 + 2)
+	position.y = position.y + 0.5
+	
 			
 func _process(delta):
 	match scriptnum:
@@ -70,6 +85,9 @@ func _process(delta):
 			sfyousei1()
 		2:
 			sfyousei2()
+		3:
+			sfyousei3()
+
 	if appearance == 1:
 		if hp < 0 or position.x < -60 or position.y < -60 or position.x > 660 or position.y > 860:
 			queue_free()

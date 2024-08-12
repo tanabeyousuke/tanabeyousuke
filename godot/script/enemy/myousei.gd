@@ -6,10 +6,11 @@ const type = "enemy"
 
 var rl = 0
 var appearance = 0
-var scriptnum = 0
+var scriptnum = 1
 var state = 0
 var opt = 0
 
+var missile = preload('res://seen/enemy/missile.tscn')
 var tama = preload('res://seen/tama.tscn')
 
 func hit(damage):
@@ -55,16 +56,32 @@ func myousei0():
 				for i in range(30):
 					cshot(position.x, position.y, rad_to_deg(atan2(deg_to_rad(Global.zpy - position.y), deg_to_rad(Global.zpx - position.x))) + ((360 / 30) * i), 5)
 
+func myousei1():
+	match state:
+		0:
+			position.y = position.y + 3
+			if abs(Global.zpx - global_position.x) < 50:
+				var i = missile.instantiate()
+				i.position.x = position.x
+				i.position.y = position.y
+				get_tree().root.add_child(i)
+				state = 1
+		1:
+			position.y = position.y - 3
+			rotation = deg_to_rad(180)				
 
 func _process(delta):
 	match scriptnum:
 		0:
 			myousei0()
-		#1:
-			#myousei1()
+		1:
+			myousei1()
 
 	if appearance == 1:
 		if hp < 0 or position.x < 35 or position.y < 35 or position.x > 635 or position.y > 825:
+			if scriptnum == 1:
+				for i in range(5):
+					cshot(position.x, position.y, atan2(Global.zpy - global_position.y, Global.zpx - global_position.x), 10 + i)
 			queue_free()
 	
 	else:

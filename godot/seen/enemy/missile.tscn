@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn1mx76rpu6e1"]
+
+[ext_resource type="Script" path="res://script/enemy/missile.gd" id="1_fu2ao"]
+[ext_resource type="Texture2D" uid="uid://bmpgn2itg50if" path="res://picture/missile.png" id="2_wbtbr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55qjg"]
+size = Vector2(149, 20)
+
+[node name="Missile" type="Area2D"]
+script = ExtResource("1_fu2ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_55qjg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wbtbr")

@@ -16,14 +16,17 @@ func _process(delta):
 			if position.y > 400:
 				opt = position.y
 				state = 1
+				count = 0
 		1:
-			position.y = -300 * sin(deg_to_rad(count + 180)) + opt
+			position.y = (-300 * sin(deg_to_rad(count + 180))) + opt
 			if count == 270:
 				state = 2
-			count = count + 1
+				count = 0
 		2:
 			position.y = position.y + 1
-
-	if hp < 0:
+				
+	if hp < 0 or position.y > 900:
+		$"../".opt = 1
 		queue_free()
 
+	count = count + 1
