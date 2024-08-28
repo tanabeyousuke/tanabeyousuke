@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhj7gls1tpwjr"]
+
+[ext_resource type="Script" path="res://script/enemy/boss/cross.gd" id="1_dxo1n"]
+[ext_resource type="Texture2D" uid="uid://dxwcfi41vhtwe" path="res://picture/enemy/boss/cross.png" id="1_gdmgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef2jp"]
+size = Vector2(100, 100)
+
+[node name="Cross" type="Area2D"]
+script = ExtResource("1_dxo1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ef2jp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gdmgm")
