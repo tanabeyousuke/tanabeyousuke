@@ -60,9 +60,3 @@ func _process(delta):
 	if hp < 0:
 		$"../".breaked()
 		queue_free()
-
-
-
-
-
-

@@ -7,9 +7,6 @@ var tama = preload('res://seen/tama.tscn')
 const type = "tairetu"
 const soten = 2500
 
-func hit(damage):
-	hp = hp - damage
-
 func cshot(x, y, angle, speed):
 	var root = get_tree().root
 	var bullet = tama.instantiate()
@@ -44,6 +41,5 @@ func _process(delta):
 	if count == 7200 or hp <= 0:
 		p.delay = 150
 		queue_free()
-				
 				
 	count = count + 1

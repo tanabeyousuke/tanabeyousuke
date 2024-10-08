@@ -42,4 +42,3 @@ func _process(delta):
 		1:
 			if count == 420:
 				state = 2
-

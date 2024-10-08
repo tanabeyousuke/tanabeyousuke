@@ -67,4 +67,3 @@ func _process(delta):
 		state = state + 1
 		count = 0
 	count = count + 1			
-

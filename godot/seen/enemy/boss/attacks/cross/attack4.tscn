@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://y0q1gllxg2xb"]
+
+[ext_resource type="Script" path="res://script/enemy/boss/attacks/cross/attack4.gd" id="1_blq2h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yy3og"]
+radius = 0.0
+
+[node name="Attack4" type="Area2D"]
+script = ExtResource("1_blq2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yy3og")
+one_way_collision_margin = 128.0

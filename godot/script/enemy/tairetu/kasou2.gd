@@ -33,4 +33,3 @@ func _process(delta):
 			count = count + 1
 			if count == 180:
 				state = 2
-

@@ -75,8 +75,8 @@ func sfyousei3():
 		for ha in range(5):
 			cshot(global_position.x, global_position.y, rad_to_deg(atan2(Global.zpy - global_position.y, Global.zpx - global_position.x)), ha * 2 + 2)
 	position.y = position.y + 0.5
-	
-			
+
+
 func _process(delta):
 	match scriptnum:
 		0:

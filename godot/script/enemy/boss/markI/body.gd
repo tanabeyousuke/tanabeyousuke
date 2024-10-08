@@ -40,4 +40,3 @@ func _process(delta):
 	count = count + 1
 	if hp < 1:
 		queue_free()
-

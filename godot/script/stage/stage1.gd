@@ -52,4 +52,3 @@ func _process(delta):
 		tank.num = 1
 		add_child(tank)
 		
-

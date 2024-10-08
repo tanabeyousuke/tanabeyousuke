@@ -105,6 +105,17 @@ func yousei5():
 	if count % 6 == 0:
 		cshot(global_position.x, global_position.y, rad_to_deg(atan2(Global.zpy - global_position.y, Global.zpx - global_position.x)) + randi() % 8 - 4, 5)
 
+func yousei6():
+	global_position.x = global_position.x + cos(deg_to_rad(opt)) * 2
+	global_position.y = global_position.y + sin(deg_to_rad(opt)) * 2
+
+	if count % 10 == 0:
+		var i = 0
+		if rl == 0:
+			i = opt + 90
+		else:
+			i = opt - 90
+		cshot(global_position.x, global_position.y, i, 3)
 
 func _process(delta):
 	match scriptnum:
@@ -120,6 +131,8 @@ func _process(delta):
 			yousei4()
 		5:
 			yousei5()
+		6:
+			yousei6()
 			
 	if appearance == 1:
 		if hp < 0 or global_position.x < -25 or global_position.y < -25 or global_position.x > 625 or global_position.y > 825:
