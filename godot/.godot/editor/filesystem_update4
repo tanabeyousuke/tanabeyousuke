@@ -1,9 +1,0 @@
-res://seen/enemy/boss/cross.tscn
-res://script/enemy/yousei.gd
-res://script/enemy/tairetu/sfyousei/sfyousei1.gd
-res://script/enemy/sfyousei.gd
-res://seen/enemy/boss/attacks/cross/attack6.tscn
-res://seen/enemy/boss/attacks/cross/attack7.tscn
-res://seen/enemy/tairetu/sfyousei/sfyousei1.tscn
-res://seen/enemy/tairetu/myousei/myousei1.tscn
-res://seen/enemy/boss/attacks/cross/attack8.tscn

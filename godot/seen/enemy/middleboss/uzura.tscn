@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx88fowk8dtgf"]
+
+[ext_resource type="Texture2D" uid="uid://bglaaguymxexr" path="res://picture/enemy/middleboss/uzurabody.png" id="1_ui5yn"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/uzura.gd" id="2_fpbmm"]
+
+[node name="Uzura" type="Sprite2D"]
+texture = ExtResource("1_ui5yn")
+script = ExtResource("2_fpbmm")
