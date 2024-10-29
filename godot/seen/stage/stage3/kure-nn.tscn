@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://drl4mmyr7jkh0"]
+
+[ext_resource type="Texture2D" uid="uid://cd02o4fivf0jd" path="res://picture/piston.png" id="1_rn0ir"]
+[ext_resource type="Script" path="res://script/stage/stage3/kure_nn.gd" id="2_vl2kk"]
+[ext_resource type="Texture2D" uid="uid://bws7i1j75bsd" path="res://picture/ufo.png" id="3_8qasx"]
+[ext_resource type="Texture2D" uid="uid://c082867nk30n3" path="res://picture/arm.png" id="4_oa8av"]
+[ext_resource type="Script" path="res://script/stage/stage3/prize.gd" id="5_abmmh"]
+[ext_resource type="Texture2D" uid="uid://b71orosq7yyv0" path="res://picture/nui.png" id="5_g8cs2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0m18"]
+size = Vector2(255.273, 560.175)
+
+[node name="Kure-nn" type="Sprite2D"]
+z_index = 3
+position = Vector2(100, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rn0ir")
+script = ExtResource("2_vl2kk")
+
+[node name="ufo" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0, 300)
+texture = ExtResource("3_8qasx")
+
+[node name="right" type="Node2D" parent="ufo"]
+z_index = -1
+position = Vector2(200, 0)
+
+[node name="right" type="Sprite2D" parent="ufo/right"]
+position = Vector2(150, 125)
+texture = ExtResource("4_oa8av")
+
+[node name="left" type="Node2D" parent="ufo"]
+z_index = -1
+position = Vector2(-200, 0)
+
+[node name="left" type="Sprite2D" parent="ufo/left"]
+position = Vector2(-150, 125)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("4_oa8av")
+
+[node name="Sprite2D" type="Sprite2D" parent="ufo"]
+z_index = -1
+position = Vector2(0, -300)
+texture = ExtResource("1_rn0ir")
+
+[node name="prize" type="Area2D" parent="."]
+z_index = -3
+position = Vector2(0, 1000)
+rotation = 1.39626
+script = ExtResource("5_abmmh")
+
+[node name="prize" type="Sprite2D" parent="prize"]
+scale = Vector2(3, 3)
+texture = ExtResource("5_g8cs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prize"]
+position = Vector2(-2.89429, -0.876266)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_b0m18")

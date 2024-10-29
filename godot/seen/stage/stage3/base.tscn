@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://lqmqxxvmc1kv"]
+[gd_scene load_steps=4 format=3 uid="uid://lqmqxxvmc1kv"]
 
 [ext_resource type="Script" path="res://script/stage/stage3/base.gd" id="1_4t1kw"]
 [ext_resource type="Texture2D" uid="uid://bwn55r2pybppv" path="res://picture/stage/stage3/1.png" id="2_q4n4n"]
+[ext_resource type="PackedScene" uid="uid://drl4mmyr7jkh0" path="res://seen/stage/stage3/kure-nn.tscn" id="3_s3ojd"]
 
 [node name="Base" type="Node2D"]
 script = ExtResource("1_4t1kw")
@@ -9,3 +10,15 @@ script = ExtResource("1_4t1kw")
 [node name="line1" type="Sprite2D" parent="."]
 position = Vector2(300, -1360)
 texture = ExtResource("2_q4n4n")
+
+[node name="Kure-nn" parent="." instance=ExtResource("3_s3ojd")]
+position = Vector2(150, -2500)
+
+[node name="Kure-nn2" parent="." instance=ExtResource("3_s3ojd")]
+position = Vector2(450, -2500)
+
+[node name="Kure-nn3" parent="." instance=ExtResource("3_s3ojd")]
+position = Vector2(150, -3000)
+
+[node name="Kure-nn4" parent="." instance=ExtResource("3_s3ojd")]
+position = Vector2(450, -3000)
