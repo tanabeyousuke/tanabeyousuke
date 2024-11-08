@@ -1,0 +1,88 @@
+[gd_scene load_steps=15 format=3 uid="uid://ew164nu0u4a"]
+
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/trafalgar.gd" id="1_phmsy"]
+[ext_resource type="Texture2D" uid="uid://bh4cljtybg3rv" path="res://picture/trafalgarsyatai.png" id="2_vyj2g"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/hokora.gd" id="3_251np"]
+[ext_resource type="Texture2D" uid="uid://k6bn714r1w3p" path="res://picture/trafalgarhoudai.png" id="4_nbcm7"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/left.gd" id="5_l3caf"]
+[ext_resource type="Texture2D" uid="uid://baery1y5p3i1u" path="res://picture/enemy/settiin.png" id="6_rfuou"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/right.gd" id="7_uqhch"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/leftvolta.gd" id="8_q4p45"]
+[ext_resource type="Texture2D" uid="uid://qorrpgyb77sy" path="res://picture/enemy/volta.png" id="9_f2tav"]
+[ext_resource type="Script" path="res://script/enemy/middleboss/trafalgar/rightvolta.gd" id="10_lsg3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t41v"]
+size = Vector2(300, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlhwh"]
+size = Vector2(236, 296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3n4vb"]
+size = Vector2(80, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01pwh"]
+size = Vector2(50, 200)
+
+[node name="Trafalgar" type="Area2D"]
+position = Vector2(300, 500)
+script = ExtResource("1_phmsy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_0t41v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vyj2g")
+
+[node name="hokora" type="Area2D" parent="."]
+position = Vector2(0, -171)
+script = ExtResource("3_251np")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hokora"]
+shape = SubResource("RectangleShape2D_xlhwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="hokora"]
+texture = ExtResource("4_nbcm7")
+
+[node name="left" type="Area2D" parent="."]
+position = Vector2(-120, 50)
+script = ExtResource("5_l3caf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_3n4vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="left"]
+texture = ExtResource("6_rfuou")
+
+[node name="right" type="Area2D" parent="."]
+position = Vector2(120, 50)
+script = ExtResource("7_uqhch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_3n4vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="right"]
+scale = Vector2(-1, 1)
+texture = ExtResource("6_rfuou")
+
+[node name="leftvolta" type="Area2D" parent="."]
+position = Vector2(-110, -120)
+script = ExtResource("8_q4p45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftvolta"]
+shape = SubResource("RectangleShape2D_01pwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="leftvolta"]
+texture = ExtResource("9_f2tav")
+
+[node name="rightvolta" type="Area2D" parent="."]
+position = Vector2(110, -120)
+script = ExtResource("10_lsg3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightvolta"]
+shape = SubResource("RectangleShape2D_01pwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="rightvolta"]
+texture = ExtResource("9_f2tav")

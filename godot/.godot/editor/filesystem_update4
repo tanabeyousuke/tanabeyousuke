@@ -13,7 +13,6 @@ res://seen/stage/stage1.tscn
 res://seen/stage/stage2.tscn
 res://seen/enemy/middleboss/uzura.tscn
 res://seen/ziki.tscn
-res://seen/enemy/middleboss/uzurahoudai.tscn
 res://seen/stage/stage3/base.tscn
 res://seen/stage/stage3/kure-nn.tscn
-res://script/stage/stage3/prize.gd
+res://seen/enemy/middleboss/trafalgar/trafalgar.tscn

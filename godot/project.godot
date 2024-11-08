@@ -24,6 +24,11 @@ window/size/viewport_width=600
 window/size/viewport_height=800
 window/size/resizable=false
 
+[editor]
+
+movie_writer/movie_file="/home/tanabe/ビデオ/godotdebug/a.avi"
+movie_writer/fps=10
+
 [input]
 
 up={
