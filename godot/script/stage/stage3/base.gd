@@ -6,7 +6,6 @@ var pstart = 0
 var uzura = preload("res://seen/enemy/middleboss/uzura.tscn")
 
 func _process(delta):
-	print(position.y)
 	match movestate:
 		0:#uzura
 			if pstart == 0:

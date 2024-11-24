@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://lqmqxxvmc1kv"]
+[gd_scene load_steps=5 format=3 uid="uid://lqmqxxvmc1kv"]
 
 [ext_resource type="Script" path="res://script/stage/stage3/base.gd" id="1_4t1kw"]
 [ext_resource type="Texture2D" uid="uid://bwn55r2pybppv" path="res://picture/stage/stage3/1.png" id="2_q4n4n"]
 [ext_resource type="PackedScene" uid="uid://drl4mmyr7jkh0" path="res://seen/stage/stage3/kure-nn.tscn" id="3_s3ojd"]
+[ext_resource type="PackedScene" uid="uid://ew164nu0u4a" path="res://seen/enemy/middleboss/trafalgar/trafalgar.tscn" id="4_7spyr"]
 
 [node name="Base" type="Node2D"]
 script = ExtResource("1_4t1kw")
@@ -22,3 +23,6 @@ position = Vector2(150, -3000)
 
 [node name="Kure-nn4" parent="." instance=ExtResource("3_s3ojd")]
 position = Vector2(450, -3000)
+
+[node name="Trafalgar" parent="." instance=ExtResource("4_7spyr")]
+position = Vector2(300, -1500)

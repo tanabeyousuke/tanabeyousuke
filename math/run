@@ -1,0 +1,5 @@
+#!/bin/bash
+
+platex math.tex
+dvipdfmx math.dvi
+evince math.pdf
