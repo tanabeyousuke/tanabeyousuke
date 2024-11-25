@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2024.11.22)  24 NOV 2024 22:52
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2024.11.22)  26 NOV 2024 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -129,15 +129,51 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+(/usr/share/texlive/texmf-dist/tex/latex/ascmac/ascmac.sty
+Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/ascmac/tascmac.sty
+Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
+\@savetbaselineshift=\dimen171
+\@saveybaselineshift=\dimen172
+\scb@x=\box71
+\scscb@x=\box72
+\@bw=\dimen173
+\@nbox=\box73
+\@nbody=\box74
+\@scw=\dimen174
+\ascmac@hoboxa=\box75
+\ascmac@hoboxb=\box76
+\@itemh=\dimen175
+\@iboxpos=\toks24
+\@iboxstr=\box77
+\@bwsp=\box78
+\@@bwsp=\box79
+\@bcal=\count273
+\shaderule=\dimen176
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box80
+\shadowsize=\dimen177
+\@Sbox=\box81
+\do@VerbBox=\toks25
+\the@fancyput=\toks26
+\this@fancyput=\toks27
+\EndVerbatimTokens=\toks28
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read2
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2024-01-04 L3 backend support: dvips
-\l__pdf_internal_box=\box71
-\g__pdf_backend_object_int=\count273
-\l__pdf_backend_content_box=\box72
-\l__pdf_backend_model_box=\box73
-\g__pdf_backend_annotation_int=\count274
-\g__pdf_backend_link_int=\count275
-\g__pdf_backend_link_sf_int=\count276
+\l__pdf_internal_box=\box82
+\g__pdf_backend_object_int=\count274
+\l__pdf_backend_content_box=\box83
+\l__pdf_backend_model_box=\box84
+\g__pdf_backend_annotation_int=\count275
+\g__pdf_backend_link_int=\count276
+\g__pdf_backend_link_sf_int=\count277
 )
 
 LaTeX Warning: Unused global option(s):
@@ -146,130 +182,64 @@ LaTeX Warning: Unused global option(s):
 (./math.aux)
 \openout1 = `math.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 15.
+(Font)              scaled to size 16.60605pt on input line 18.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 15.
+(Font)              scaled to size 16.60605pt on input line 18.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 15.
+(Font)              scaled to size 11.53198pt on input line 18.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 15.
+(Font)              scaled to size 11.53198pt on input line 18.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 15.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+(Font)              scaled to size 5.76599pt on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 17.
+(Font)              scaled to size 13.83836pt on input line 20.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 17.
+(Font)              scaled to size 13.83836pt on input line 20.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 17.
+(Font)              scaled to size 13.83836pt on input line 20.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 17.
+(Font)              scaled to size 13.83836pt on input line 20.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 22.
+(Font)              scaled to size 11.53198pt on input line 25.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 22.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.35 ...ABが表すベクトルを\overrightarrow{\rm AB}
-                                                  で表す。また、ベクトルを\over
-
-? 
+(Font)              scaled to size 11.53198pt on input line 25.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 35.
+(Font)              scaled to size 6.72699pt on input line 38.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 35.
-! Missing $ inserted.
-<inserted text> 
-                $
-l.36 \par
-          ベクトル\overrightarrow{\rm AB} , \overrightarrow{\rm a} の大きさ...
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.36 \par ベクトル\overrightarrow{\rm AB}
-                                          , \overrightarrow{\rm a} の大きさ...
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.37 \par
-          向き、大きさが同じの2つのベクトル\overrightarrow{\rm a} ,\overrigh...
+(Font)              scaled to size 4.805pt on input line 38.
+ [1
 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.37 ...同じの2つのベクトル\overrightarrow{\rm a}
-                                                  ,\overrightarrow{\rm b} は等
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.38 \par
-         \overrightarrow{\rm AB}=\overrightarrow{\rm CD}のとき、有向線分\ove...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.38 \par\overrightarrow{\rm AB}
-                                =\overrightarrow{\rm CD}のとき、有向線分\ove...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.39 
-     
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.41 ベクトル\overrightarrow{\rm a}
-                                   と大きさが等しく、向きが反対のベクトルを\...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.42 \end{document}
-                   
-? 
-[1
-
-] (./math.aux)
+] [2] (./math.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01> patch level 1
@@ -277,12 +247,12 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1936 strings out of 475989
- 26520 string characters out of 5789698
- 1935820 words of memory out of 5000000
- 24124 multiletter control sequences out of 15000+600000
- 571738 words of font info for 100 fonts, out of 8000000 for 9000
+ 2237 strings out of 475989
+ 30836 string characters out of 5789698
+ 1963820 words of memory out of 5000000
+ 24413 multiletter control sequences out of 15000+600000
+ 571834 words of font info for 101 fonts, out of 8000000 for 9000
  269 hyphenation exceptions out of 8191
- 56i,14n,65p,247b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,16n,65p,233b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on math.dvi (1 page, 3352 bytes).
+Output written on math.dvi (2 pages, 9344 bytes).

@@ -1,6 +1,8 @@
 \documentclass[pulatex,dvpdfmx,a4paper]{jsarticle}
 
 \usepackage{amssymb, amsmath}
+\usepackage{ascmac}
+\usepackage{fancybox}
 
 \title{ベクトル}
 \author{渡邉　陽平}
@@ -9,6 +11,7 @@
 
 \newcommand{\abs}[1]{\lvert #1 \rvert}
 \newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\bekutoru}[1]{\overrightarrow{\rm #1}}
 
 \begin{document}
 
@@ -32,11 +35,64 @@
 例として、物理で習った速度や力は向きと大きさを持つ量であり、ベクトルと言える。
 
 \subsection*{B ベクトルの表記}
-有向線分ABが表すベクトルを\overrightarrow{\rm AB} で表す。また、ベクトルを\overrightarrow{\rm a}, \overrightarrow{\rm b} と表すこともある。
-\par ベクトル\overrightarrow{\rm AB} , \overrightarrow{\rm a} の大きさはそれぞれ\abs{\overrightarrow{\rm AB}} , \abs{\overrightarrow{\rm a}} で表す。このとき、\abs{\overrightarrow{\rm AB}} は有向線分ABの長さに等しい。
-\par 向き、大きさが同じの2つのベクトル\overrightarrow{\rm a} ,\overrightarrow{\rm b} は等しいといい、\overrightarrow{\rm a} =\overrightarrow{\rm b} と書く。
-\par\overrightarrow{\rm AB}=\overrightarrow{\rm CD}のとき、有向線分\overrightarrow{\rm AB}を平行移動して有向線分\overrightarrow{\rm CD}に重ね合わせることができる。
+有向線分ABが表すベクトルを$\bekutoru{AB}$ で表す。また、ベクトルを$\bekutoru{a}$ $\bekutoru{b}$ と表すこともある。
+\par ベクトル$\bekutoru{AB}$ , $\bekutoru{a}$の大きさはそれぞれ$\abs{\bekutoru{AB}}$ , $\abs{\bekutoru{a}}$ で表す。このとき、$\abs{\bekutoru{AB}}$ は有向線分ABの長さに等しい。
+\par 向き、大きさが同じの2つのベクトル$\bekutoru{a}$ ,$\bekutoru{b}$ は等しいといい、$\bekutoru{a}=\bekutoru{b}$ と書く。
+\par$\bekutoru{AB}=\bekutoru{CD}$のとき、有向線分$\bekutoru{AB}$を平行移動して有向線分$\bekutoru{CD}$と重ね合わせることができる。
 
 \par
-ベクトル\overrightarrow{\rm a}と大きさが等しく、向きが反対のベクトルを\overrightarrow{\rm a}の逆ベクトルといい、-\overrightarrow{\rm a}で表す。
+ベクトル$\bekutoru{a}$と大きさが等しく、向きが反対のベクトルを$\bekutoru{a}$の逆ベクトルといい、$-\bekutoru{a}$で表す。
+
+\begin{screen}
+  $\bekutoru{a}=\bekutoru{BA}$である。\par
+  すなわち$\bekutoru{BA}=\bekutoru{AB}$
+\end{screen}
+
+\section*{2 ベクトルの演算}
+\subsection*{A ベクトルの加法}
+
+ベクトル$\bekutoru{a}=\bekutoru{AB}$とベクトル$\bekutoru{b}$に対して、$\bekutoru{BC}=\bekutoru{b}$となる点Cを取る。\par
+このようにして定まるベクトル$\bekutoru{AB}$を$\bekutoru{a}$と$\bekutoru{b}$の和といい、$\bekutoru{a}+\bekutoru{b}$と書く。\par
+次が成り立つ。
+\begin{screen}
+  $\bekutoru{AB}+\bekutoru{BC}=\bekutoru{AC}$
+\end{screen}
+
+ベクトルの加法について、次のことが成り立つ。
+\begin{itembox}[l]{ベクトルの加法の性質}
+  $\bekutoru{a}+\bekutoru{b}=\bekutoru{b}+\bekutoru{a}$ (交換法則)
+  $(\bekutoru{a}+\bekutoru{b})+\bekutoru{c}=\bekutoru{a}+(\bekutoru{b}+\bekutoru{c})$ (結合法則)
+\end{itembox}
+
+\subsection*{B 零ベクトル}
+$\bekutoru{a}=\bekutoru{AB}$のとき、$-\bekutoru{a}=\bekutoru{BA}$であるから、\par
+$\bekutoru{a}+(-\bekutoru{a})=\bekutoru{AB}+\bekutoru{BA}=\bekutoru{AA}$\par となる。\par
+ここで、$\bekutoru{AA}$は始点と終点が一致した有向線分のベクトルと考え、その大きさは0であるとする。\par
+大きさが0のベクトルを零ベクトルまたはゼロベクトルといい、$\bekutoru{0}$で表す。\par
+零ベクトルに関して、次が成り立つ。
+\begin{screen}
+  $\bekutoru{a}+(-\bekutoru{a})=\bekutoru{0}$\par
+  $\bekutoru{a}+\bekutoru{0}=\bekutoru{a}$
+\end{screen}
+
+\subsection*{C ベクトルの減法}
+ベクトル$\bekutoru{a}$, $\bekutoru{b}$に対して、$\bekutoru{b}+\bekutoru{c}=\bekutoru{a}$を満たすベクトル$\bekutoru{c}$を、$\bekutoru{a}$と$\bekutoru{b}$の差といい、$\bekutoru{a}-\bekutoru{b}$と書く。\par
+
+一般に、$\bekutoru{OB}+\bekutoru{BA}=\bekutoru{OA}$であるから、次が成り立つ。
+\begin{screen}
+  $\bekutoru{OA}-\bekutoru{OB}=\bekutoru{BA}$
+\end{screen}
+
+同様に、$\bekutoru{OA}+\bekutoru{AB}=\bekutoru{OB}$より、次が成り立つ。\par
+\begin{screen}
+  $\bekutoru{AB}=\bekutoru{OB}-\bekutoru{OA}$
+\end{screen}
+
+ベクトルの減法について、次が成り立つ。
+\begin{screen}
+  $\bekutoru{a}-\bekutoru{b}=\bekutoru{a}+\bekutoru{b}$\par
+  $\bekutoru{a}-\bekutoru{a}=\bekutoru{0}$
+\end{screen}
+
+
 \end{document}

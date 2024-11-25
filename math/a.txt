@@ -1,0 +1,43 @@
+$\documentclass[pulatex,dvpdfmx,a4paper]{jsarticle}
+
+$\usepackage{amssymb, amsmath}
+
+$\title{ベクトル}
+$\author{渡邉　陽平}
+$\date{2024年4月1日}
+
+
+$\newcommand{$\abs}[1]{$\lvert #1 $\rvert}
+$\newcommand{$\norm}[1]{$\lVert #1 $\rVert}
+$\newcommand{$\bekutoru}[1]{$\overrightarrow{$\rm #1}}
+
+$\begin{document}
+
+$\maketitle
+
+$\section*{1 ベクトル}
+
+平面上で図形の平行移動は、向きを持つ線分で表現できる。
+線分につけた矢印の向きで移動する向きを、線分の長さで移動距離を表現する。
+
+$\subsection*{A 有効線分とベクトル}
+
+向きをつけた線分を有向線分という。
+有向線分ABでは、Aを始点、Bを終点と呼び、その向きはAからBへと向かっているとする。
+また、線分ABの長さを、有向線分ABの大きさまたは長さと言う。
+
+平面上で図形を平行移動する場合,平行移動を表す線分はいくらでも図示できるが、位置が違うだけで長さ、向きは等しい。
+
+有向線分の違いを無視して、その向き、長さのみに着目したものをベクトルという。
+
+例として、物理で習った速度や力は向きと大きさを持つ量であり、ベクトルと言える。
+
+$\subsection*{B ベクトルの表記}
+有向線分ABが表すベクトルを$\bekutoru{AB} で表す。また、ベクトルを$\bekutoru{a} $\bekutoru{b} と表すこともある。
+$\par ベクトル$\bekutoru{AB} , $\bekutoru{a} の大きさはそれぞれ$\abs{$\bekutoru{AB}} , $\abs{$\bekutoru{a}} で表す。このとき、$\abs{$\bekutoru{AB}} は有向線分ABの長さに等しい。
+$\par 向き、大きさが同じの2つのベクトル$\bekutoru{a} ,$\bekutoru{b} は等しいといい、$\bekutoru{a} =$\bekutoru{b} と書く。
+$\par$\bekutoru{AB} $\bekutoru{CD} とき、有向線分$\bekutoru{AB} 平行移動して有向線分$\bekutoru{CD} 重ね合わせることができる。
+
+$\par
+ベクトル$\bekutoru{a} 大きさが等しく、向きが反対のベクトルを$\bekutoru{a} 逆ベクトルといい、-$\bekutoru{a} 表す。
+$\end{document}
