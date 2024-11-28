@@ -1,98 +1,263 @@
-\documentclass[pulatex,dvpdfmx,a4paper]{jsarticle}
+\documentclass[a4paper]{jsarticle}
 
 \usepackage{amssymb, amsmath}
 \usepackage{ascmac}
 \usepackage{fancybox}
+\usepackage{listings}
 
-\title{ベクトル}
+\title{'(レポート (ベクトル 計算) (対象 lisper))}
 \author{渡邉　陽平}
 \date{2024年4月1日}
-
 
 \newcommand{\abs}[1]{\lvert #1 \rvert}
 \newcommand{\norm}[1]{\lVert #1 \rVert}
 \newcommand{\bekutoru}[1]{\overrightarrow{\rm #1}}
+\newcommand{\itibekutoru}[2]{#1(\bekutoru{#2})}
 
 \begin{document}
 
 \maketitle
 
-\section*{1 ベクトル}
+%% \section*{1 ベクトル}
 
-平面上で図形の平行移動は、向きを持つ線分で表現できる。
-線分につけた矢印の向きで移動する向きを、線分の長さで移動距離を表現する。
+%% 平面上で図形の平行移動は、向きを持つ線分で表現できる。
+%% 線分につけた矢印の向きで移動する向きを、線分の長さで移動距離を表現する。
 
-\subsection*{A 有効線分とベクトル}
+%% \subsection*{A 有効線分とベクトル}
 
-向きをつけた線分を有向線分という。
-有向線分ABでは、Aを始点、Bを終点と呼び、その向きはAからBへと向かっているとする。
-また、線分ABの長さを、有向線分ABの大きさまたは長さと言う。
+%% 向きをつけた線分を有向線分という。
+%% 有向線分ABでは、Aを始点、Bを終点と呼び、その向きはAからBへと向かっているとする。
+%% また、線分ABの長さを、有向線分ABの大きさまたは長さと言う。
 
-平面上で図形を平行移動する場合,平行移動を表す線分はいくらでも図示できるが、位置が違うだけで長さ、向きは等しい。
+%% 平面上で図形を平行移動する場合,平行移動を表す線分はいくらでも図示できるが、位置が違うだけで長さ、向きは等しい。
 
-有向線分の違いを無視して、その向き、長さのみに着目したものをベクトルという。
+%% 有向線分の違いを無視して、その向き、長さのみに着目したものをベクトルという。
 
-例として、物理で習った速度や力は向きと大きさを持つ量であり、ベクトルと言える。
+%% 例として、物理で習った速度や力は向きと大きさを持つ量であり、ベクトルと言える。
 
-\subsection*{B ベクトルの表記}
-有向線分ABが表すベクトルを$\bekutoru{AB}$ で表す。また、ベクトルを$\bekutoru{a}$ $\bekutoru{b}$ と表すこともある。
-\par ベクトル$\bekutoru{AB}$ , $\bekutoru{a}$の大きさはそれぞれ$\abs{\bekutoru{AB}}$ , $\abs{\bekutoru{a}}$ で表す。このとき、$\abs{\bekutoru{AB}}$ は有向線分ABの長さに等しい。
-\par 向き、大きさが同じの2つのベクトル$\bekutoru{a}$ ,$\bekutoru{b}$ は等しいといい、$\bekutoru{a}=\bekutoru{b}$ と書く。
-\par$\bekutoru{AB}=\bekutoru{CD}$のとき、有向線分$\bekutoru{AB}$を平行移動して有向線分$\bekutoru{CD}$と重ね合わせることができる。
+%% \subsection*{B ベクトルの表記}
+%% 有向線分ABが表すベクトルを$\bekutoru{AB}$ で表す。また、ベクトルを$\bekutoru{a}$ $\bekutoru{b}$ と表すこともある。
+%% \par ベクトル$\bekutoru{AB}$ , $\bekutoru{a}$の大きさはそれぞれ$\abs{\bekutoru{AB}}$ , $\abs{\bekutoru{a}}$ で表す。このとき、$\abs{\bekutoru{AB}}$ は有向線分ABの長さに等しい。
+%% \par 向き、大きさが同じの2つのベクトル$\bekutoru{a}$ ,$\bekutoru{b}$ は等しいといい、$\bekutoru{a}=\bekutoru{b}$ と書く。
+%% \par$\bekutoru{AB}=\bekutoru{CD}$のとき、有向線分$\bekutoru{AB}$を平行移動して有向線分$\bekutoru{CD}$と重ね合わせることができる。
 
-\par
-ベクトル$\bekutoru{a}$と大きさが等しく、向きが反対のベクトルを$\bekutoru{a}$の逆ベクトルといい、$-\bekutoru{a}$で表す。
+%% \par
+%% ベクトル$\bekutoru{a}$と大きさが等しく、向きが反対のベクトルを$\bekutoru{a}$の逆ベクトルといい、$-\bekutoru{a}$で表す。
 
+%% \begin{screen}
+%%   $\bekutoru{a}=\bekutoru{BA}$である。\par
+%%   すなわち$\bekutoru{BA}=\bekutoru{AB}$
+%% \end{screen}
+
+%% \section*{2 ベクトルの演算}
+%% \subsection*{A ベクトルの加法}
+
+%% ベクトル$\bekutoru{a}=\bekutoru{AB}$とベクトル$\bekutoru{b}$に対して、$\bekutoru{BC}=\bekutoru{b}$となる点Cを取る。\par
+%% このようにして定まるベクトル$\bekutoru{AB}$を$\bekutoru{a}$と$\bekutoru{b}$の和といい、$\bekutoru{a}+\bekutoru{b}$と書く。\par
+%% 次が成り立つ。
+%% \begin{screen}
+%%   $\bekutoru{AB}+\bekutoru{BC}=\bekutoru{AC}$
+%% \end{screen}
+
+%% ベクトルの加法について、次のことが成り立つ。
+%% \begin{itembox}[l]{ベクトルの加法の性質}
+%%   $\bekutoru{a}+\bekutoru{b}=\bekutoru{b}+\bekutoru{a}$ (交換法則)
+%%   $(\bekutoru{a}+\bekutoru{b})+\bekutoru{c}=\bekutoru{a}+(\bekutoru{b}+\bekutoru{c})$ (結合法則)
+%% \end{itembox}
+
+%% \subsection*{B 零ベクトル}
+%% $\bekutoru{a}=\bekutoru{AB}$のとき、$-\bekutoru{a}=\bekutoru{BA}$であるから、\par
+%% $\bekutoru{a}+(-\bekutoru{a})=\bekutoru{AB}+\bekutoru{BA}=\bekutoru{AA}$\par となる。\par
+%% ここで、$\bekutoru{AA}$は始点と終点が一致した有向線分のベクトルと考え、その大きさは0であるとする。\par
+%% 大きさが0のベクトルを零ベクトルまたはゼロベクトルといい、$\bekutoru{0}$で表す。\par
+%% 零ベクトルに関して、次が成り立つ。
+%% \begin{screen}
+%%   $\bekutoru{a}+(-\bekutoru{a})=\bekutoru{0}$\par
+%%   $\bekutoru{a}+\bekutoru{0}=\bekutoru{a}$
+%% \end{screen}
+
+%% \subsection*{C ベクトルの減法}
+%% ベクトル$\bekutoru{a}$, $\bekutoru{b}$に対して、$\bekutoru{b}+\bekutoru{c}=\bekutoru{a}$を満たすベクトル$\bekutoru{c}$を、$\bekutoru{a}$と$\bekutoru{b}$の差といい、$\bekutoru{a}-\bekutoru{b}$と書く。\par
+
+%% 一般に、$\bekutoru{OB}+\bekutoru{BA}=\bekutoru{OA}$であるから、次が成り立つ。
+%% \begin{screen}
+%%   $\bekutoru{OA}-\bekutoru{OB}=\bekutoru{BA}$
+%% \end{screen}
+
+%% 同様に、$\bekutoru{OA}+\bekutoru{AB}=\bekutoru{OB}$より、次が成り立つ。\par
+%% \begin{screen}
+%%   $\bekutoru{AB}=\bekutoru{OB}-\bekutoru{OA}$
+%% \end{screen}
+
+%% ベクトルの減法について、次が成り立つ。
+%% \begin{screen}
+%%   $\bekutoru{a}-\bekutoru{b}=\bekutoru{a}+\bekutoru{b}$\par
+%%   $\bekutoru{a}-\bekutoru{a}=\bekutoru{0}$
+%% \end{screen}
+
+\section*{ベクトルの成分}
+\subsection*{ベクトルの成分表示}
+x軸、y軸の正の向きと同じ向きの長さが1のベクトルを基本ベクトルといい、それぞれ$\bekutoru{e_1}, \bekutoru{e_2}$と表す。\par
+ベクトルをxとyの増加量で書くと次のようになる。\par
+$\bekutoru{a}=(a_1, a_2)$\par
+$a_1, a_2$をそれぞれ$\bekutoru{a}$のx成分、ｙ成分と言う。まとめて成分とも言う。\par
+２つのベクトルについて次が成り立つ。\par
+$\bekutoru{a}=\bekutoru{a}$であれば$a_1=b_1, a_2=b_2$
+また、ベクトルの大きさは次のように求められる。\par
 \begin{screen}
-  $\bekutoru{a}=\bekutoru{BA}$である。\par
-  すなわち$\bekutoru{BA}=\bekutoru{AB}$
+  $\bekutoru{a}=(a_1, a_2)$のとき、$\abs{\bekutoru{a}}=\sqrt{a^2_1+a^2_1}$
 \end{screen}
 
-\section*{2 ベクトルの演算}
-\subsection*{A ベクトルの加法}
+\begin{boxnote}
+  ベクトルの成分表示はcommon lispのconsセルを用いて以下のように表せる。\par
+  \begin{lstlisting}
+    (x . y)
+  \end{lstlisting}
 
-ベクトル$\bekutoru{a}=\bekutoru{AB}$とベクトル$\bekutoru{b}$に対して、$\bekutoru{BC}=\bekutoru{b}$となる点Cを取る。\par
-このようにして定まるベクトル$\bekutoru{AB}$を$\bekutoru{a}$と$\bekutoru{b}$の和といい、$\bekutoru{a}+\bekutoru{b}$と書く。\par
+  ベクトルの大きさを求める関数をcommon lispで書くと、\par
+  \begin{lstlisting}
+    (defun size (vector)
+      (sqrt (+
+        (expt (car vector) 2)
+        (expt (cdr vector) 2))))
+  \end{lstlisting}
+\end{boxnote}
+
+\subsection*{和,差,実数倍の成分表示}
+
+ベクトルの和、差、実数倍は次のことが言える。
+\begin{screen}
+  $(a_1, a_2)+(b_1, b_2)=(a_1+b_1, a_2+b_2)$\par
+  $(a_1, a_2)-(b_1, b_2)=(a_1-b_1, a_2-b_2)$\par
+  $k(a_1, a_2)=(ka_1, ka_2)$\par
+\end{screen}
+要はそれぞれの成分同士を足したり引いたり、それぞれの成分にかけてやれば良い。
+
+\begin{boxnote}
+  ベクトルの和、差、実数倍を求める関数は
+  \begin{lstlisting}
+    (defun wa (firstvector secondvector)
+      (cons
+        (+ (car firstvector) (car secondvector))
+        (+ (cdr firstvector) (cdr secondvector))))
+
+    (defun sa (firstvector secondvector)
+      (cons
+        (- (car firstvector) (car secondvector))
+        (- (cdr firstvector) (cdr secondvector))))
+
+    (defun zissuubai (vector number)
+      (cons
+        (* (car vector) number)
+        (* (cdr vector) number)))
+    
+  \end{lstlisting}  
+\end{boxnote}
+
+\subsection*{座標平面上の点とベクトル}
+
+座標平面上に2点$A(a_1, a_2),B(b_1, b_2)$がある時,$\bekutoru{AB}$は
+$\bekutoru{AB}=\bekutoru{OB}-\bekutoru{OA}$\par
+$(a_1, a_2)-(b_1, b_2)=(a_1-b_1, a_2-b_2)$\par
+
+以上から次が言える。
+\begin{screen}
+  二点$A(a_1, a_2),B(b_1, b_2)$について
+  $\bekutoru{AB}=(a_1-b_1, a_2-b_2)$\par
+  $\abs{\bekutoru{AB}}=\sqrt{(a_1-b_1, a_2-b_2)}$\par
+\end{screen}
+
+上は差を求める関数を使えばよいのでlispのコードは書かない。\par
+
+\section*{ベクトルの内積}
+\subsection*{ベクトルの内積}
+
+大きさが0ではない２つのベクトル$\bekutoru{a},\bekutoru{b}$について、適当な点Oから伸ばした先をA,Bとする。
+$\angle\mathrm{AOB}$の優角でない方を$\bekutoru{a},\bekutoru{b}$のなす角という。\par
+$\abs{\bekutoru{a}}\abs{\bekutoru{b}}\cos\theta$を内積という。$\bekutoru{a}\cdot\bekutoru{b}$と書く。
+
+\subsection*{成分による内積の表示}
+ベクトルの内積は成分表示を用いて次のように表すことができる。
+
+\begin{screen}
+  $\bekutoru{a}\cdot\bekutoru{b}=a_1b_1+a_2b_2$
+\end{screen}
+
+\begin{boxnote}
+  内積を求める関数は
+  \begin{lstlisting}
+  (defun naiseki (firstvector secondvector)
+    (+ (* (car firstvector) (car secondvector))
+       (* (cdr firstvector) (cdr secondvector))))
+  \end{lstlisting}
+  なす角を求める関数は
+  \begin{lstlisting}
+  (defun nasukaku (firstvector secondvector)
+    (acos (/
+      (naiseki firstvector secondvector)
+        (* (size firstvector) (size secondvector)))))
+  \end{lstlisting}
+\end{boxnote}
+
+なす角が$90^{\circ}$のときは内積は0になる。$\cos90^{\circ}$は0だからである。仕方ないね。
+
+\subsection*{内積の性質}
 次が成り立つ。
 \begin{screen}
-  $\bekutoru{AB}+\bekutoru{BC}=\bekutoru{AC}$
+  $\bekutoru{a}\cdot\bekutoru{a}=\abs{\bekutoru{a}}^2$\par
+  $\bekutoru{a}\cdot\bekutoru{b}=\bekutoru{b}\cdot\bekutoru{a}$\par
+  $(\bekutoru{a}+\bekutoru{b})\cdot\bekutoru{c}=\bekutoru{a}\cdot\bekutoru{c}+\bekutoru{b}\cdot\bekutoru{c}$\par
+  $\bekutoru{a}\cdot(\bekutoru{b}+\bekutoru{c})=\bekutoru{a}\cdot\bekutoru{c}+\bekutoru{b}\cdot\bekutoru{c}$\par
+  $(k\bekutoru{a})\cdot\bekutoru{b}=\bekutoru{a}\cdot(k\bekutoru{b})=k(\bekutoru{a}\cdot\bekutoru{b})$\par
 \end{screen}
 
-ベクトルの加法について、次のことが成り立つ。
-\begin{itembox}[l]{ベクトルの加法の性質}
-  $\bekutoru{a}+\bekutoru{b}=\bekutoru{b}+\bekutoru{a}$ (交換法則)
-  $(\bekutoru{a}+\bekutoru{b})+\bekutoru{c}=\bekutoru{a}+(\bekutoru{b}+\bekutoru{c})$ (結合法則)
-\end{itembox}
 
-\subsection*{B 零ベクトル}
-$\bekutoru{a}=\bekutoru{AB}$のとき、$-\bekutoru{a}=\bekutoru{BA}$であるから、\par
-$\bekutoru{a}+(-\bekutoru{a})=\bekutoru{AB}+\bekutoru{BA}=\bekutoru{AA}$\par となる。\par
-ここで、$\bekutoru{AA}$は始点と終点が一致した有向線分のベクトルと考え、その大きさは0であるとする。\par
-大きさが0のベクトルを零ベクトルまたはゼロベクトルといい、$\bekutoru{0}$で表す。\par
-零ベクトルに関して、次が成り立つ。
+
+\section*{位置ベクトル}
+\subsection*{位置ベクトル}
+平面上で点Oを決めておくとどんな点Pでもベクトル$\bekutoru{p}=\bekutoru{OP}$によって決まる。\par
+これを位置ベクトルと呼び、上の例では$\itibekutoru{P}{p}$で表す。\par
+
+二点A,Bに対して、
+$\bekutoru{AB}=\bekutoru{b}-\bekutoru{a}$が言える。
+
+\subsection*{内分点、外分点の位置ベクトル}
+
+2点$\itibekutoru{A}{a},\itibekutoru{B}{b}$にたいして、線分ABをm:nに内分,外分する点の位置ベクトルは次のようになる。
 \begin{screen}
-  $\bekutoru{a}+(-\bekutoru{a})=\bekutoru{0}$\par
-  $\bekutoru{a}+\bekutoru{0}=\bekutoru{a}$
+  内分:\par
+  $\frac{n\bekutoru{a}+m\bekutoru{b}}{m+n}$\par
+  外分:\par
+  $\frac{-n\bekutoru{a}+m\bekutoru{b}}{m-n}$
 \end{screen}
 
-\subsection*{C ベクトルの減法}
-ベクトル$\bekutoru{a}$, $\bekutoru{b}$に対して、$\bekutoru{b}+\bekutoru{c}=\bekutoru{a}$を満たすベクトル$\bekutoru{c}$を、$\bekutoru{a}$と$\bekutoru{b}$の差といい、$\bekutoru{a}-\bekutoru{b}$と書く。\par
+\begin{boxnote}
+  内分、外分する位置ベクトルを求める関数は
+  \begin{lstlisting}
+    (defun naibun (firstvector secondvector m n)
+      (/
+        (+ (zissubai firstvector n) (zissubai secondvector m))
+        (+ m n)))
 
-一般に、$\bekutoru{OB}+\bekutoru{BA}=\bekutoru{OA}$であるから、次が成り立つ。
-\begin{screen}
-  $\bekutoru{OA}-\bekutoru{OB}=\bekutoru{BA}$
-\end{screen}
+    (defun naibun (firstvector secondvector m n)
+      (/
+        (+ (- 0 (zissubai firstvector n)) (zissubai secondvector m))
+        (- m n)))
+  \end{lstlisting}
+\end{boxnote}
 
-同様に、$\bekutoru{OA}+\bekutoru{AB}=\bekutoru{OB}$より、次が成り立つ。\par
-\begin{screen}
-  $\bekutoru{AB}=\bekutoru{OB}-\bekutoru{OA}$
-\end{screen}
+\subsection*{三角形の重心の位置ベクトル}
 
-ベクトルの減法について、次が成り立つ。
-\begin{screen}
-  $\bekutoru{a}-\bekutoru{b}=\bekutoru{a}+\bekutoru{b}$\par
-  $\bekutoru{a}-\bekutoru{a}=\bekutoru{0}$
-\end{screen}
+三角形の重心の位置ベクトル$\bekutoru{g}$を求める。
+位置ベクトル$\bekutoru{g}$は
+$\bekutoru{g}=\frac{\bekutoru{a}+\bekutoru{b}+\bekutoru{c}}{3}$
 
+\begin{boxnote}
+  重心を求める関数は
+  \begin{lstlisting}
+    (defun zyuusin (firstvector secondvector thirdvector)
+      (/ (wa firstvector (wa secondvector thirdvector)) 3))
+  \end{lstlisting}
+\end{boxnote}
 
 \end{document}
