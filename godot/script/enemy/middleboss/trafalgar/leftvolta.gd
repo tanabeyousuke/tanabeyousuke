@@ -1,7 +1,7 @@
 extends Area2D
 
 var count = 0
-var hp = 7500
+var hp = 35000
 
 var tama = preload('res://seen/tama.tscn')
 
@@ -29,11 +29,12 @@ func _process(delta):
 			if count % 100 == 0:
 				bangle = rad_to_deg(atan2(Global.zpy - sbposy, Global.zpx - global_position.x))
 
-			var sangle = bangle + (randi() % 90 - 45) + randf()
-			var shotposx = global_position.x + cos(deg_to_rad(randi())) * (randi() % 10)
-			var shotposy = sbposy + sin(deg_to_rad(randi())) * (randi() % 10)
-			cshot(shotposx, shotposy, sangle, 8)
-			cshot(shotposx + cos(deg_to_rad(sangle)) * 100,
-				shotposy + sin(deg_to_rad(sangle)) * 100,
-				sangle, 3)
+			if count % 3 == 0:
+				var sangle = bangle + (randi() % 90 - 45) + randf()
+				var shotposx = global_position.x + cos(deg_to_rad(randi())) * (randi() % 10)
+				var shotposy = sbposy + sin(deg_to_rad(randi())) * (randi() % 10)
+				cshot(shotposx, shotposy, sangle, 5)
+				cshot(shotposx + cos(deg_to_rad(sangle)) * 100,
+					shotposy + sin(deg_to_rad(sangle)) * 100,
+					sangle, 2)
 	count = count + 1

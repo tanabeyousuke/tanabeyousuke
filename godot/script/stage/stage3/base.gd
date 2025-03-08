@@ -16,7 +16,7 @@ func _process(delta):
 				root.add_child(uzr)
 				pstart = 0
 
-			if pstart == 180:
+			if pstart == 220:
 				pstart = -1
 				movestate = 1
 				
@@ -32,5 +32,9 @@ func _process(delta):
 			if position.y > 3520:
 				pstart = -1
 				movestate = 3
+
+		3:
+			position.x = position.x + 1.3
+			
 
 	pstart = pstart + 1

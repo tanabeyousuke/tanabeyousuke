@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bckhgffa4f8rk" path="res://picture/enemy/middleboss/uzurahoudai.png" id="2_krmkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2d87e"]
+size = Vector2(150, 150)
 
 [node name="Uzurahoudai" type="Area2D"]
 script = ExtResource("1_8ejxx")

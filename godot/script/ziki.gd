@@ -4,11 +4,7 @@ var speed = 10
 var ct = 0
 const type = "ziki"
 
-func _ready():
-	print(position.y)
-
 func _process(delta):
-	print(position.y)
 	Global.zpx = position.x
 	Global.zpy = position.y
 	var opt = $"option"

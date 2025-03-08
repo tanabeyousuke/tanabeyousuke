@@ -1,7 +1,7 @@
 extends Area2D
 
 var count = 0
-var hp = 5000
+var hp = 20000
 
 var tama = preload('res://seen/tama.tscn')
 

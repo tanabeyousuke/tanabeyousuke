@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var z = preload("res://seen/ziki.tscn")
 var stage = [preload("res://seen/stage/stage1.tscn").instantiate(),
 	preload("res://seen/stage/stage2.tscn").instantiate(),

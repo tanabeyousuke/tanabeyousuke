@@ -1,7 +1,7 @@
 extends Area2D
 
 var count = 0
-var hp = 7000
+var hp = 35000
 
 var tama = preload('res://seen/tama.tscn')
 
@@ -51,7 +51,7 @@ func _process(delta):
 				
 	
 	if hp <= 0:
-		$"../".hit(3000)
+		$"../".hit(30000)
 		queue_free()
 		
 	count = count + 1
