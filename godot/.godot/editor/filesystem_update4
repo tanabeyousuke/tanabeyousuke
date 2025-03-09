@@ -1,0 +1,10 @@
+res://seen/enemy/middleboss/itamae/tubo.tscn
+res://script/enemy/yousei.gd
+res://script/enemy/tairetu/yousei/yousei1.gd
+res://script/enemy/tairetu/sfyousei/sfyousei1.gd
+res://script/enemy/sfyousei.gd
+res://script/enemy/dreamsf/tyoutugai.gd
+res://seen/enemy/middleboss/trafalgar/trafalgar.tscn
+res://seen/enemy/middleboss/uzura.tscn
+res://seen/stage/stage3/base.tscn
+res://seen/enemy/middleboss/itamae/nothere.tscn

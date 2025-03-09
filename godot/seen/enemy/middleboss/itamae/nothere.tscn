@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://draujyuqc5wqr"]
+
+[ext_resource type="Script" path="res://script/enemy/middleboss/itamae/nothere.gd" id="1_36k8a"]
+[ext_resource type="Texture2D" uid="uid://bsj11y26vbdf4" path="res://picture/enemy/boss/itamae/nothere.png" id="2_ppv4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnaq6"]
+size = Vector2(322, 544)
+
+[node name="Nothere" type="Area2D"]
+z_index = -1
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_36k8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ppv4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rnaq6")

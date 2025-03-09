@@ -35,6 +35,8 @@ func _process(delta):
 
 		3:
 			position.x = position.x + 1.3
-			
+			if position.x > 500:
+				pstart = -1
+				movestate = 4
 
 	pstart = pstart + 1
