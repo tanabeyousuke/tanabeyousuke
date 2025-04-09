@@ -4,5 +4,6 @@
 [ext_resource type="Script" path="res://script/enemy/middleboss/uzura.gd" id="2_fpbmm"]
 
 [node name="Uzura" type="Sprite2D"]
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("1_ui5yn")
 script = ExtResource("2_fpbmm")

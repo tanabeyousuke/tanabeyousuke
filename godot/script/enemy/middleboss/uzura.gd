@@ -4,6 +4,7 @@ var houdai = preload("res://seen/enemy/middleboss/uzurahoudai.tscn")
 
 var hp = 10000
 var nokori = 8
+var count = 0
 
 func broke():
 	nokori = nokori - 1
@@ -20,4 +21,5 @@ func _init():
 		
 func _process(delta):
 	rotation = rotation + deg_to_rad(0.5)
-	
+	position.x = 300 + sin(deg_to_rad(count * 0.5)) * 100
+	count = count + 1
